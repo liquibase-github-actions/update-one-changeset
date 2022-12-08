@@ -6,13 +6,14 @@ option java_package = "org.liquibase.grpc.proto";
 option java_multiple_files = true;
 option java_outer_classname = "UpdateOneChangesetProto";
 
-package liquibase;
+package liquibase.pro;
 
 service UpdateOneChangesetService {
   rpc execute(UpdateOneChangesetRequest) returns (Response) {}
 }
 
-/* Runs single changeset */
+/* [PRO]
+Runs single changeset */
 message UpdateOneChangesetRequest {
   string changeset_author = 1; // *required* Author of the changeset to execute
   string changeset_id = 2; // *required* Id of the changeset to execute
