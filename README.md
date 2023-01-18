@@ -7,7 +7,7 @@ Runs single changeset
 ```yaml
 steps:
 - uses: actions/checkout@v3
-- uses: liquibase-github-actions/update-one-changeset@v4.18.0
+- uses: liquibase-github-actions/update-one-changeset@v4.19.0
   with:
     # Author of the changeset to execute
     # string
@@ -76,7 +76,7 @@ The liquibase update one changeset action accepts all valid liquibase global opt
 ```yaml
 steps:
   - uses: actions/checkout@v3
-  - uses: liquibase-github-actions/update-one-changeset@v4.18.0
+  - uses: liquibase-github-actions/update-one-changeset@v4.19.0
     with:
       changesetAuthor: ""
       changesetId: ""
