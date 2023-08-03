@@ -29,11 +29,6 @@ steps:
     # Required
     url: ""
 
-    # 
-    # string
-    # Optional
-    database: ""
-
     # The default catalog name to use for the database connection
     # string
     # Optional
@@ -64,10 +59,10 @@ steps:
     # Optional
     password: ""
 
-    # 
+    # If set to true and any changeset in a deployment fails, then the update operation stops, and liquibase attempts to rollback all changesets just deployed. A changeset marked "fail-on-error=false" does not trigger as an error, therefore rollback-on-error will not occur. Additionally, if a changeset is not auto-rollback compliant or does not have a rollback script, then no rollback-on-error will occur for any changeset.
     # bool
     # Optional
-    skipDatabaseStep: ""
+    rollbackOnError: ""
 
     # Username to use to connect to the database
     # string

@@ -18,17 +18,16 @@ message UpdateOneChangesetRequest {
   string changeset_author = 1; // *required* Author of the changeset to execute
   string changeset_id = 2; // *required* Id of the changeset to execute
   string changeset_path = 3; // *required* Path to the changeset to execute
-  optional string database = 4;
-  optional string default_catalog_name = 5; // The default catalog name to use for the database connection
-  optional string default_schema_name = 6; // The default schema name to use for the database connection
-  optional string driver = 7; // The JDBC driver class
-  optional string driver_properties_file = 8; // The JDBC driver properties file
-  optional bool force = 9; // A required safety flag to indicate you intend to use this feature
-  optional string password = 10; // Password to use to connect to the database
-  optional bool skip_database_step = 11;
-  string url = 12; // *required* The JDBC database connection URL
-  optional string username = 13; // Username to use to connect to the database
-  liquibase.GlobalOptions global_options = 14;
+  optional string default_catalog_name = 4; // The default catalog name to use for the database connection
+  optional string default_schema_name = 5; // The default schema name to use for the database connection
+  optional string driver = 6; // The JDBC driver class
+  optional string driver_properties_file = 7; // The JDBC driver properties file
+  optional bool force = 8; // A required safety flag to indicate you intend to use this feature
+  optional string password = 9; // Password to use to connect to the database
+  optional bool rollback_on_error = 10; // If set to true and any changeset in a deployment fails, then the update operation stops, and liquibase attempts to rollback all changesets just deployed. A changeset marked "fail-on-error=false" does not trigger as an error, therefore rollback-on-error will not occur. Additionally, if a changeset is not auto-rollback compliant or does not have a rollback script, then no rollback-on-error will occur for any changeset.
+  string url = 11; // *required* The JDBC database connection URL
+  optional string username = 12; // Username to use to connect to the database
+  liquibase.GlobalOptions global_options = 13;
 }
 
 message Response {
