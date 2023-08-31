@@ -9,6 +9,11 @@ steps:
 - uses: actions/checkout@v3
 - uses: liquibase-github-actions/update-one-changeset@v4.23.1
   with:
+    # The root changelog file
+    # string
+    # Required
+    changelogFile: ""
+
     # Author of the changeset to execute
     # string
     # Required
@@ -28,6 +33,11 @@ steps:
     # string
     # Required
     url: ""
+
+    # Context string to use for filtering
+    # string
+    # Optional
+    contextFilter: ""
 
     # The default catalog name to use for the database connection
     # string
@@ -53,6 +63,11 @@ steps:
     # bool
     # Optional
     force: ""
+
+    # Label expression to use for filtering
+    # string
+    # Optional
+    labelFilter: ""
 
     # Password to use to connect to the database
     # string
@@ -83,6 +98,7 @@ steps:
   - uses: actions/checkout@v3
   - uses: liquibase-github-actions/update-one-changeset@v4.23.1
     with:
+      changelogFile: ""
       changesetAuthor: ""
       changesetId: ""
       changesetPath: ""
