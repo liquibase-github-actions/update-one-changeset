@@ -1,8 +1,7 @@
 # Liquibase Update One Changeset Action
 Official GitHub Action to run Liquibase Update One Changeset in your GitHub Action Workflow. For more information on how update one changeset works visit the [Official Liquibase Documentation](https://docs.liquibase.com/commands/home.html).
 ## Update One Changeset
-[PRO]
-Runs single changeset
+[PRO] Runs single changeset
 ## Usage
 ```yaml
 steps:

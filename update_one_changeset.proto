@@ -12,8 +12,7 @@ service UpdateOneChangesetService {
   rpc execute(UpdateOneChangesetRequest) returns (Response) {}
 }
 
-/* [PRO]
-Runs single changeset */
+/* [PRO] Runs single changeset */
 message UpdateOneChangesetRequest {
   optional string change_exec_listener_class = 1; // Fully-qualified class which specifies a ChangeExecListener
   optional string change_exec_listener_properties_file = 2; // Path to a properties file for the ChangeExecListenerClass
