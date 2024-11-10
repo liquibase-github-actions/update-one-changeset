@@ -6,7 +6,7 @@ Official GitHub Action to run Liquibase Update One Changeset in your GitHub Acti
 ```yaml
 steps:
 - uses: actions/checkout@v3
-- uses: liquibase-github-actions/update-one-changeset@v4.29.2
+- uses: liquibase-github-actions/update-one-changeset@v4.30.0
   with:
     # The root changelog file
     # string
@@ -120,7 +120,7 @@ The liquibase update one changeset action accepts all valid liquibase global opt
 ```yaml
 steps:
   - uses: actions/checkout@v3
-  - uses: liquibase-github-actions/update-one-changeset@v4.29.2
+  - uses: liquibase-github-actions/update-one-changeset@v4.30.0
     with:
       changelogFile: ""
       changesetAuthor: ""
