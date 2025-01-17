@@ -31,10 +31,12 @@ message UpdateOneChangesetRequest {
   optional bool report_enabled = 15; // [PRO] Enable or disable reporting.
   optional string report_name = 16; // [PRO] The name of the report.
   optional string report_path = 17; // [PRO] The path to the directory to generate the report.
-  optional bool rollback_on_error = 18; // If set to true and any changeset in a deployment fails, then the update operation stops, and liquibase attempts to rollback all changesets just deployed. A changeset marked "fail-on-error=false" does not trigger as an error, therefore rollback-on-error will not occur. Additionally, if a changeset is not auto-rollback compliant or does not have a rollback script, then no rollback-on-error will occur for any changeset.
-  string url = 19; // *required* The JDBC database connection URL
-  optional string username = 20; // Username to use to connect to the database
-  liquibase.GlobalOptions global_options = 21;
+  optional bool report_suppress_exception = 18; // [PRO] Setting to prevent the display of exceptions (which might contain SQL) in operation reports. If suppressSql is on, and no value is provided here, it is assumed to also be on.
+  optional bool report_suppress_sql = 19; // [PRO] Setting to prevent the display of changeset SQL in operation reports.
+  optional bool rollback_on_error = 20; // If set to true and any changeset in a deployment fails, then the update operation stops, and liquibase attempts to rollback all changesets just deployed. A changeset marked "fail-on-error=false" does not trigger as an error, therefore rollback-on-error will not occur. Additionally, if a changeset is not auto-rollback compliant or does not have a rollback script, then no rollback-on-error will occur for any changeset.
+  string url = 21; // *required* The JDBC database connection URL
+  optional string username = 22; // Username to use to connect to the database
+  liquibase.GlobalOptions global_options = 23;
 }
 
 message Response {
